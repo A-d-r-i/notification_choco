@@ -1,0 +1,1 @@
+Start-Process powershell -Verb runAs -ArgumentList "choco outdated`n`rpause"
