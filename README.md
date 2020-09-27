@@ -18,9 +18,9 @@ It is by starting from this principle and by failing with the other proposed met
 	- C:\notification_choco.ps1
 	- C:\check_choco.ps1
 	- C:\upgrade_choco.ps1
-- Creation of the scheduled task: [tutorial](https://www.technipages.com/scheduled-task-windows)
-- Add triggers: *e.g. every day at 12:00 p.m. and at each session opening*
-- Add an action:  
+2. Creation of the scheduled task: [tutorial](https://www.technipages.com/scheduled-task-windows)
+3. Add triggers: *e.g. every day at 12:00 p.m. and at each session opening*
+4. Add an action:  
 	- Start a program (*powershell*)
 	- Add arguments : `-WindowStyle Hidden -NonInteractive -ExecutionPolicy Bypass -File "C:\notification_choco.ps1"`
 
