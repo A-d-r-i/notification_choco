@@ -15,9 +15,9 @@ It is by starting from this principle and by failing with the other proposed met
 ```
 Install-Module BurntToast
 ```
-*This may require the installation of NuGet and a Powershell version ≥ 5.0*
+*This may require the installation of NuGet and a Powershell version ≥ 7.0*
 
-# 2 ways to do
+# 1 way to do
 - **WINDOWS** : see all the details delow 
 
 ---
@@ -32,8 +32,11 @@ Install-Module BurntToast
 5. Add an action:  
 	- Start a program : *powershell* or the full address of the program (*C: / ... powershell.exe*)
 	- Add arguments : `-WindowStyle Hidden -NonInteractive -ExecutionPolicy Bypass -File "C:\notification_choco.ps1"`
+6. Install PowerShell 7.x: `iex "& { $(irm https://aka.ms/install-powershell.ps1) } -UseMSI"`
+7. Add PowerShell 7.x in path: **Advanced system settings** > **Environnement Variables** > **System variables** > **"Path"** (Edit) > **New** > **"C:\Program Files\PowerShell\7\"**
+8. **IMPORTANT!** During the first execution windows will ask if we really want to open this file (unknown editor etc ...). You must **uncheck** "*always ask before opening this file*" and click on "open". **This for all scripts**.
 
-## Second solution
+### Other solution for scheduled task
 You can also import the "**Notification_choco.xml**" file directly into the task scheduler (only if the **3 files are in the root of C:** and **powershell are in the path of the system**).
 
 **And There you go !**
